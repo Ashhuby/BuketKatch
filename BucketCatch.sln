@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BucketCatch", "BucketCatch.csproj", "{95DAFDFB-D5D8-46C5-AC05-D4AE20C8F849}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95DAFDFB-D5D8-46C5-AC05-D4AE20C8F849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DAFDFB-D5D8-46C5-AC05-D4AE20C8F849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DAFDFB-D5D8-46C5-AC05-D4AE20C8F849}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{95DAFDFB-D5D8-46C5-AC05-D4AE20C8F849}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{95DAFDFB-D5D8-46C5-AC05-D4AE20C8F849}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{95DAFDFB-D5D8-46C5-AC05-D4AE20C8F849}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
