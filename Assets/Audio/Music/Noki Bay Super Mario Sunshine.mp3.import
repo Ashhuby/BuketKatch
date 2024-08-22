@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddh36wpfrdye0"
+path="res://.godot/imported/Noki Bay Super Mario Sunshine.mp3-fe2e9de48d16361577d3e319417adef9.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Noki Bay Super Mario Sunshine.mp3"
+dest_files=["res://.godot/imported/Noki Bay Super Mario Sunshine.mp3-fe2e9de48d16361577d3e319417adef9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
