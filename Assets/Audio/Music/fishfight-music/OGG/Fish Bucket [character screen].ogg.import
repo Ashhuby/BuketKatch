@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://m7drgl0uiw80"
+path="res://.godot/imported/Fish Bucket [character screen].ogg-fb9671491d122280900ab8685a2d9cef.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/OGG/Fish Bucket [character screen].ogg"
+dest_files=["res://.godot/imported/Fish Bucket [character screen].ogg-fb9671491d122280900ab8685a2d9cef.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

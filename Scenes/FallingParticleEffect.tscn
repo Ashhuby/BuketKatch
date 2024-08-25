@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://1doku5lls4ie"]
+
+[sub_resource type="Curve" id="Curve_26pcg"]
+_data = [Vector2(0, 0.5), 0.0, 50000.0, 0, 1, Vector2(1e-05, 1), 0.0, 0.0, 0, 0, Vector2(0.38764, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -1.63303, 0.0, 1, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_4n8ch"]
+offsets = PackedFloat32Array(0, 0.6)
+colors = PackedColorArray(1, 0, 0, 1, 0.829343, 0.533446, 0.120048, 1)
+
+[node name="FallingParticle" type="Node2D"]
+scale = Vector2(5, 5)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 2000
+lifetime = 0.4
+emission_shape = 1
+emission_sphere_radius = 4.0
+gravity = Vector2(0, -900)
+radial_accel_min = 100.0
+radial_accel_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_26pcg")
+color = Color(1, 0.615686, 0.215686, 1)
+color_ramp = SubResource("Gradient_4n8ch")

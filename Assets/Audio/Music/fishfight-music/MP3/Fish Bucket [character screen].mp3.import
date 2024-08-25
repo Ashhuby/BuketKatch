@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dthdfcvk4pttm"
+path="res://.godot/imported/Fish Bucket [character screen].mp3-0a9aa00f38d4dd6a62927e4fa32655d1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/MP3/Fish Bucket [character screen].mp3"
+dest_files=["res://.godot/imported/Fish Bucket [character screen].mp3-0a9aa00f38d4dd6a62927e4fa32655d1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

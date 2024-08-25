@@ -6,13 +6,16 @@ public partial class Player : Area2D
 	[Export]
 	public int Speed { get; set; } = 400; // How fast the player will move (pixels/sec).
 	private Vector2 ScreenSize; // Size of the game window.
-	public static int score = 0;
+	public int score = 0;	//Changed from static to nonstatic 
 	private Label scoreLabel;
+	private Label finalScoreLabel;
 	private AudioStreamPlayer audioPlayer;
+	public bool is_Dead = false;
 
 	public override void _Ready()
 	{
 		scoreLabel = GetNode<Label>($"../ScoreLabel");
+		finalScoreLabel = GetNode<Label>("../KillZone/myGameOverScreen/FinalScoreLabel");
 		audioPlayer = GetNode<AudioStreamPlayer>("CatchSound");
 		ScreenSize = GetViewportRect().Size;
 	}
@@ -43,8 +46,12 @@ public partial class Player : Area2D
 	
 	public void AddScore()
 	{
-		score++;
-		scoreLabel.Text = score.ToString();
+		if(is_Dead == false)
+		{
+			score++;
+		}
+			scoreLabel.Text = score.ToString();
+			finalScoreLabel.Text = score.ToString();
 	}
 	public void CatchSound()
 	{

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ch2jxionrjcdl"
+path="res://.godot/imported/Fishycuffs [title screen].mp3-f050aca71313d8a6c6fa9ff35b86968a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/MP3/Fishycuffs [title screen].mp3"
+dest_files=["res://.godot/imported/Fishycuffs [title screen].mp3-f050aca71313d8a6c6fa9ff35b86968a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

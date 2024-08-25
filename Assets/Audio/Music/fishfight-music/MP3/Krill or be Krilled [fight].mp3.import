@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cddap8tqqfmdh"
+path="res://.godot/imported/Krill or be Krilled [fight].mp3-5ea21d0ec07579241c6197e914c76461.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/MP3/Krill or be Krilled [fight].mp3"
+dest_files=["res://.godot/imported/Krill or be Krilled [fight].mp3-5ea21d0ec07579241c6197e914c76461.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

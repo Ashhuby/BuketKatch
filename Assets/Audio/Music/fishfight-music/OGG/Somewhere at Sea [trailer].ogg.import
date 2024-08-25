@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5s7kdng6hm2g"
+path="res://.godot/imported/Somewhere at Sea [trailer].ogg-d6ffaca77ef5792da248297e46264b35.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/OGG/Somewhere at Sea [trailer].ogg"
+dest_files=["res://.godot/imported/Somewhere at Sea [trailer].ogg-d6ffaca77ef5792da248297e46264b35.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

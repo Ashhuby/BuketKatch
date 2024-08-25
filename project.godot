@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="BucketCatch"
-run/main_scene="res://Scenes/game_world.tscn"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://Assets/icon.svg"
 
 [display]
 

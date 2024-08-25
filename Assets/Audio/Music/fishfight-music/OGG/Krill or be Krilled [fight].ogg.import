@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rnoo6co2vbk7"
+path="res://.godot/imported/Krill or be Krilled [fight].ogg-930350f521106886d5bc81ca7f3cc082.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/OGG/Krill or be Krilled [fight].ogg"
+dest_files=["res://.godot/imported/Krill or be Krilled [fight].ogg-930350f521106886d5bc81ca7f3cc082.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

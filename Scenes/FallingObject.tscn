@@ -1,17 +1,81 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4pmlr7gsh48t"]
+[gd_scene load_steps=9 format=3 uid="uid://c4pmlr7gsh48t"]
 
 [ext_resource type="Script" path="res://Scipts/FallingObject.cs" id="1_s2xkq"]
 [ext_resource type="Texture2D" uid="uid://df3ovd2jo03ss" path="res://Assets/Ball/spritesheet (1).png" id="2_f5alk"]
 [ext_resource type="Script" path="res://Scipts/RandomisedBallSprite.cs" id="3_hvhhc"]
+[ext_resource type="PackedScene" uid="uid://bb268ia7x6ril" path="res://Scenes/ExplosionEffect.tscn" id="4_pc4jj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_juxop"]
 size = Vector2(40, 40)
+
+[sub_resource type="Animation" id="Animation_ky4gw"]
+resource_name = "objectExplosion"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RandomisedBallSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CPUParticles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ru7qi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RandomisedBallSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("CPUParticles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uyr6g"]
+_data = {
+"ExplodeAnimation": SubResource("Animation_ky4gw"),
+"RESET": SubResource("Animation_ru7qi")
+}
 
 [node name="FallingObject" type="RigidBody2D"]
 collision_mask = 2
 mass = 0.5
 gravity_scale = 0.2
 script = ExtResource("1_s2xkq")
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("4_pc4jj")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_juxop")
@@ -23,3 +87,8 @@ texture = ExtResource("2_f5alk")
 region_enabled = true
 region_rect = Rect2(426, 0, 213, 200)
 script = ExtResource("3_hvhhc")
+
+[node name="ExplosionAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uyr6g")
+}

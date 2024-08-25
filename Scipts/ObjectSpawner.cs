@@ -5,9 +5,10 @@ public partial class ObjectSpawner : Node2D
 {
 	[Export] PackedScene fallingObject_scn;
 	[Export] Node2D[] spawn_Points;
-	[Export] float eps = 1f;
+	[Export] float eps = 1.2f;
 	 float spawn_Rate;
 	 float time_until_spawn = 0;
+	 public bool is_Spawning = true;
 
 	 public override void _Ready()
 	 {
@@ -16,14 +17,17 @@ public partial class ObjectSpawner : Node2D
 
 	 public override void _Process(double delta)
 	 {	
-		if (time_until_spawn > spawn_Rate) 
+		if(is_Spawning == true)
 		{
-			Spawn();
-			time_until_spawn = 0;
-		}
-		else
-		{
-			time_until_spawn += (float)delta;
+			if (time_until_spawn > spawn_Rate) 
+			{
+				Spawn();
+				time_until_spawn = 0;
+			}
+			else
+			{
+				time_until_spawn += (float)delta;
+			}
 		}
 	 }
 

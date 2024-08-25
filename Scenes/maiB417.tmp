@@ -1,0 +1,367 @@
+[gd_scene load_steps=24 format=3 uid="uid://dwcrl6olnk06p"]
+
+[ext_resource type="Texture2D" uid="uid://bks4i3c40q71f" path="res://Assets/Background/Beach-2D-Backgrounds/PNG/game_background_1/layers/sky.png" id="1_1prei"]
+[ext_resource type="Script" path="res://Scipts/main_menu.cs" id="1_04hg1"]
+[ext_resource type="Texture2D" uid="uid://bhykxw57he774" path="res://Assets/Background/Beach-2D-Backgrounds/PNG/game_background_1/layers/sea.png" id="2_1es6e"]
+[ext_resource type="Texture2D" uid="uid://ves4dj234kua" path="res://Assets/Background/Beach-2D-Backgrounds/PNG/game_background_1/layers/land.png" id="3_4ex0q"]
+[ext_resource type="Texture2D" uid="uid://cnb7s24sejmou" path="res://Assets/Background/Beach-2D-Backgrounds/PNG/game_background_1/layers/decor.png" id="4_enj24"]
+[ext_resource type="Texture2D" uid="uid://dbvhrhlr3lsj4" path="res://Assets/Background/Beach-2D-Backgrounds/PNG/game_background_1/layers/cloud.png" id="5_73fou"]
+[ext_resource type="FontFile" uid="uid://cm8b1civt6vtc" path="res://Assets/Fonts/Kaph_Font_1_20/OpenType (.otf)/Kaph-Regular.otf" id="6_j776w"]
+[ext_resource type="Texture2D" uid="uid://c6wg6o8kolc05" path="res://Assets/Icons/ExportedIcons/Icon_Crown.png" id="8_1p5cq"]
+[ext_resource type="Texture2D" uid="uid://jguhi26075cq" path="res://Assets/Icons/ExportedIcons/Icon_X.png" id="9_0bb0j"]
+
+[sub_resource type="Animation" id="Animation_ctrlx"]
+resource_name = "BoatAnimation"
+length = 12.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 4.8, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-40, 568), Vector2(110, 569), Vector2(206, 541), Vector2(540, 513)]
+}
+
+[sub_resource type="Animation" id="Animation_6qm1i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-32, 513)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2vup"]
+_data = {
+"BoatAnimation": SubResource("Animation_ctrlx"),
+"RESET": SubResource("Animation_6qm1i")
+}
+
+[sub_resource type="Animation" id="Animation_u55qg"]
+resource_name = "CloudsAnimation"
+length = 10.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(93, 204), Vector2(385, 204)]
+}
+
+[sub_resource type="Animation" id="Animation_s2vrs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(276, 177)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m3ir3"]
+_data = {
+"CloudsAnimation": SubResource("Animation_u55qg"),
+"RESET": SubResource("Animation_s2vrs")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_keju7"]
+font = ExtResource("6_j776w")
+font_size = 52
+font_color = Color(1, 0.286275, 0.00784314, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h0qit"]
+font = ExtResource("6_j776w")
+font_size = 52
+font_color = Color(1, 0.839216, 0.239216, 1)
+outline_size = 5
+outline_color = Color(1, 0, 1, 1)
+
+[sub_resource type="Animation" id="Animation_qshvn"]
+resource_name = "MainMenuTitle"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(2, 1, 2),
+"update": 0,
+"values": [-0.174533, 0.0, 0.174533]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("Title1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10, 200), Vector2(10, 210), Vector2(10, 200)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title1:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7, 0.7), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_aehvq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, 200)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title1:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jroov"]
+_data = {
+"MainMenuTitle": SubResource("Animation_qshvn"),
+"RESET": SubResource("Animation_aehvq")
+}
+
+[sub_resource type="Animation" id="Animation_j12i2"]
+resource_name = "PlayButtonAnimation"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(2, -2),
+"update": 0,
+"values": [Vector2(51, 29), Vector2(51, 37)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 1, 2, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0349066, -0.0349066, 0.0, 0.0, 0.0349066, -0.0349066]
+}
+
+[sub_resource type="Animation" id="Animation_kbejq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(89, -305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xaje3"]
+_data = {
+"PlayButtonAnimation": SubResource("Animation_j12i2"),
+"RESET": SubResource("Animation_kbejq")
+}
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_04hg1")
+
+[node name="BackGround" type="Node" parent="."]
+
+[node name="Sky" type="Sprite2D" parent="BackGround"]
+position = Vector2(824, 453)
+scale = Vector2(0.891667, 0.891667)
+texture = ExtResource("1_1prei")
+
+[node name="Sea" type="Sprite2D" parent="BackGround"]
+position = Vector2(286, 499)
+scale = Vector2(0.639815, 0.639815)
+texture = ExtResource("2_1es6e")
+
+[node name="Land" type="Sprite2D" parent="BackGround"]
+position = Vector2(380, 419)
+texture = ExtResource("3_4ex0q")
+
+[node name="Decor" type="Sprite2D" parent="BackGround"]
+z_index = 7
+position = Vector2(536.556, 501.562)
+scale = Vector2(0.686227, 0.686227)
+texture = ExtResource("4_enj24")
+
+[node name="Boat" type="Sprite2D" parent="BackGround"]
+z_index = 6
+position = Vector2(-32, 513)
+scale = Vector2(0.686227, 0.686227)
+texture = ExtResource("4_enj24")
+region_enabled = true
+region_rect = Rect2(1602.26, 471.327, 87.5187, 114.932)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackGround/Boat"]
+libraries = {
+"": SubResource("AnimationLibrary_a2vup")
+}
+autoplay = "BoatAnimation"
+
+[node name="Cloud" type="Sprite2D" parent="BackGround"]
+z_index = 10
+texture_repeat = 2
+position = Vector2(276, 177)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_73fou")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackGround/Cloud"]
+libraries = {
+"": SubResource("AnimationLibrary_m3ir3")
+}
+autoplay = "CloudsAnimation"
+
+[node name="Title" type="Node" parent="."]
+
+[node name="Title1" type="Label" parent="Title"]
+offset_left = 10.0
+offset_top = 200.0
+offset_right = 466.0
+offset_bottom = 260.0
+pivot_offset = Vector2(228, 40)
+text = "Buket Katch"
+label_settings = SubResource("LabelSettings_keju7")
+
+[node name="Title2" type="Label" parent="Title/Title1"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 457.0
+offset_bottom = 66.0
+text = "Buket Katch"
+label_settings = SubResource("LabelSettings_h0qit")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Title"]
+active = false
+libraries = {
+"": SubResource("AnimationLibrary_jroov")
+}
+autoplay = "MainMenuTitle"
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="PlayButton" type="Button" parent="Buttons"]
+z_index = 15
+offset_left = 191.0
+offset_top = 394.0
+offset_right = 289.0
+offset_bottom = 462.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/PlayButton"]
+position = Vector2(89, -305)
+scale = Vector2(0.341095, 0.341095)
+texture = ExtResource("8_1p5cq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Buttons/PlayButton/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_xaje3")
+}
+autoplay = "PlayButtonAnimation"
+
+[node name="ExitButton" type="Button" parent="Buttons"]
+z_index = 15
+offset_left = 234.0
+offset_top = 753.0
+offset_right = 307.0
+offset_bottom = 813.0
+text = "
+"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Buttons/ExitButton"]
+self_modulate = Color(0.949578, 0.781669, 0.494933, 1)
+position = Vector2(36, 31)
+scale = Vector2(0.274038, 0.274038)
+skew = 0.497419
+texture = ExtResource("9_0bb0j")
+
+[connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/ExitButton" to="." method="_on_exit_button_pressed"]

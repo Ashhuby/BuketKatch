@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://jlmrd1f3bn7d"]
+
+[ext_resource type="Script" path="res://Scipts/ObjectSpawner.cs" id="1_ifmqm"]
+[ext_resource type="PackedScene" uid="uid://c4pmlr7gsh48t" path="res://Scenes/FallingObject.tscn" id="2_rfhus"]
+
+[node name="ObjectSpawner" type="Node2D" node_paths=PackedStringArray("spawn_Points")]
+script = ExtResource("1_ifmqm")
+fallingObject_scn = ExtResource("2_rfhus")
+spawn_Points = [NodePath("SpawnPoint"), NodePath("SpawnPoint2"), NodePath("SpawnPoint3"), NodePath("SpawnPoint4"), NodePath("SpawnPoint5")]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(50, -20)
+
+[node name="SpawnPoint2" type="Node2D" parent="."]
+position = Vector2(150, -20)
+
+[node name="SpawnPoint3" type="Node2D" parent="."]
+position = Vector2(250, -20)
+
+[node name="SpawnPoint4" type="Node2D" parent="."]
+position = Vector2(350, -20)
+
+[node name="SpawnPoint5" type="Node2D" parent="."]
+position = Vector2(450, -20)

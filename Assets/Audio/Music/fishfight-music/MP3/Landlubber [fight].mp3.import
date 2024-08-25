@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djgm05w67g4wt"
+path="res://.godot/imported/Landlubber [fight].mp3-f992b15ac7483a8b9f8f1bb93a582960.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/MP3/Landlubber [fight].mp3"
+dest_files=["res://.godot/imported/Landlubber [fight].mp3-f992b15ac7483a8b9f8f1bb93a582960.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

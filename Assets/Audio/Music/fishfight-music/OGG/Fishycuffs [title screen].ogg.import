@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cw7m8yxeu76e8"
+path="res://.godot/imported/Fishycuffs [title screen].ogg-c8e9901097e54772ea1492e7313189ae.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/OGG/Fishycuffs [title screen].ogg"
+dest_files=["res://.godot/imported/Fishycuffs [title screen].ogg-c8e9901097e54772ea1492e7313189ae.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

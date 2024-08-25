@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c4ajb08or2uw"
+path="res://.godot/imported/Landlubber [fight].ogg-d649261a81d5eb080fd11ad81c7ece4a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/OGG/Landlubber [fight].ogg"
+dest_files=["res://.godot/imported/Landlubber [fight].ogg-d649261a81d5eb080fd11ad81c7ece4a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

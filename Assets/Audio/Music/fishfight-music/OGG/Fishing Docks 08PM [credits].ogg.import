@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://chrguwgsnxcdr"
+path="res://.godot/imported/Fishing Docks 08PM [credits].ogg-e93301f54861eb5a2654536f91096537.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/fishfight-music/OGG/Fishing Docks 08PM [credits].ogg"
+dest_files=["res://.godot/imported/Fishing Docks 08PM [credits].ogg-e93301f54861eb5a2654536f91096537.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

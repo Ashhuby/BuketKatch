@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://4mjojx6s02j1"]
+
+[ext_resource type="PackedScene" uid="uid://bb268ia7x6ril" path="res://Scenes/ExplosionEffect.tscn" id="1_xnpwb"]
+
+[node name="ExplosionParticle" type="Node2D"]
+
+[node name="CPUParticles2D" parent="." instance=ExtResource("1_xnpwb")]
